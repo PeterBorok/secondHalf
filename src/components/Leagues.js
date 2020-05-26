@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 import "./Leagues.css";
+import {Link} from "react-router-dom";
 
 const Leagues = () => {
 
@@ -45,7 +46,7 @@ const Leagues = () => {
       <main>
         <section className="league-cards">
           {leagues.map((entry) => (
-              <div className="league-card">
+              <div className="league-card" key={entry.id}>
                 <div className="league-card__image-container">
                   <img src={entry.badge} alt={entry.league}/>
                 </div>
@@ -55,7 +56,9 @@ const Leagues = () => {
                   </p>
                   <div className="league-card__info">
                     <p className="text--medium">{entry.country}</p>
-                    <p className="league-card__website text--medium">{entry.website}</p>
+                    <Link to={`/league/${entry.id}`} className="league-card__teams">
+                      <div className="text--medium team-list">Teams</div>
+                    </Link>
                   </div>
                 </div>
               </div>
