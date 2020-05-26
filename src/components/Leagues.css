@@ -69,11 +69,20 @@ main {
     align-items: center;
 }
 
-.league-card__website {
+.league-card__teams {
     margin-left: auto;
     padding: 5px 20px;
     background-color: #303032;
     border-radius: 20px;
+    font-weight: bolder;
+}
+
+a, u {
+    text-decoration: none;
+}
+
+.team-list {
+    font-weight: bolder;
 }
 
 @media only screen and (max-width: 1080px) {
