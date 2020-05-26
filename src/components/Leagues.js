@@ -43,19 +43,19 @@ const Leagues = () => {
 
   return (
       <main>
-        <section className="cards">
+        <section className="league-cards">
           {leagues.map((entry) => (
-              <div className="card">
-                <div className="card__image-container">
+              <div className="league-card">
+                <div className="league-card__image-container">
                   <img src={entry.badge} alt={entry.league}/>
                 </div>
-                <div className="card__content">
-                  <p className="card__title text--medium">
+                <div className="league-card__content">
+                  <p className="league-card__title text--medium">
                     {entry.league}
                   </p>
-                  <div className="card__info">
+                  <div className="league-card__info">
                     <p className="text--medium">{entry.country}</p>
-                    <p className="card__website text--medium">{entry.website}</p>
+                    <p className="league-card__website text--medium">{entry.website}</p>
                   </div>
                 </div>
               </div>
