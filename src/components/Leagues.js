@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
+import "./Leagues.css";
+
 const Leagues = () => {
 
   const leagueIDs = [
@@ -40,22 +42,26 @@ const Leagues = () => {
   }, [])
 
   return (
-      <div>
-        {leagues.map((entry) => (
-            <li key={entry.id}>
-              {entry.league}
-              <img src={entry.trophy} alt={entry.league} style={{width: "150px"}}/>
-              <img src={entry.poster} alt={entry.league} style={{width: "150px"}}/>
-              <img src={entry.logo} alt={entry.league} style={{width: "150px"}}/>
-              <img src={entry.badge} alt={entry.league} style={{width: "150px"}}/>
-              <img src={entry.banner} alt={entry.league} style={{width: "150px"}}/>
-              <img src={entry.fanart1} alt={entry.league} style={{width: "150px"}}/>
-              <img src={entry.fanart2} alt={entry.league} style={{width: "150px"}}/>
-              <img src={entry.fanart3} alt={entry.league} style={{width: "150px"}}/>
-              <img src={entry.fanart4} alt={entry.league} style={{width: "150px"}}/>
-            </li>
-        ))}
-      </div>
+      <main>
+        <section className="cards">
+          {leagues.map((entry) => (
+              <div className="card">
+                <div className="card__image-container">
+                  <img src={entry.badge} alt={entry.league}/>
+                </div>
+                <div className="card__content">
+                  <p className="card__title text--medium">
+                    {entry.league}
+                  </p>
+                  <div className="card__info">
+                    <p className="text--medium">{entry.country}</p>
+                    <p className="card__website text--medium">{entry.website}</p>
+                  </div>
+                </div>
+              </div>
+          ))}
+        </section>
+      </main>
   );
 }
 
