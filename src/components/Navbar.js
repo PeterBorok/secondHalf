@@ -29,7 +29,7 @@ const Navbar = () => {
                                            aria-expanded="false">
                                             Choose your league
                                         </a>
-                                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <div className="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
                                             <a className="dropdown-item" href="#">England</a>
                                             <a className="dropdown-item" href="#">France</a>
                                             <a className="dropdown-item" href="#">Germany</a>
