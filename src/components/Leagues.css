@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.text--medium {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #ecf0f1;
+}
+
+main {
+    background-color: #303032;
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+    padding: 60px 0;
+}
+
+.league-card__image-container {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+}
+
+.league-card__image-container img {
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.league-cards {
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px));
+    grid-gap: 40px;
+}
+
+.league-card {
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: #39393b;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.league-card:hover {
+    transform: translateY(-7px);
+}
+
+.league-card__content {
+    padding: 20px;
+}
+
+.league-card__title {
+    margin-bottom: 20px;
+}
+
+.league-card__info {
+    display: flex;
+    align-self: end;
+    align-items: center;
+}
+
+.league-card__teams {
+    margin-left: auto;
+    padding: 5px 20px;
+    background-color: #303032;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+a, u {
+    text-decoration: none;
+}
+
+.team-list {
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 1080px) {
+    .league-card {
+        grid-column-end: 6;
+        grid-template-columns: repeat(12, minmax(auto, 60px));
+    }
+}
+
+@media only screen and (max-width: 1079px) {
+    main {
+        grid-template-columns: 10px repeat(6, 1fr) 10px;
+        grid-gap: 20px;
+    }
+
+    .league-cards {
+        grid-column: 2 / span 6;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+
+    .league-card {
+        grid-column-end: span 6;
+    }
+}

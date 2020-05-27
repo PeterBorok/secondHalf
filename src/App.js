@@ -1,4 +1,9 @@
 import React from "react";
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
+import Leagues from "./components/Leagues";
+import SelectionPage from "./components/pages/SelectionPage";
+
 import "./App.css";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
@@ -7,15 +12,33 @@ import Navbar from "./components/Navbar";
 import EnterButton from "./components/EnterButton";
 
 function App() {
-    return <Router>
+  return (
+      <Router>
         <div className="App">
-            <Header/>
-            <Route path="/">
-                <EnterButton/>
-            </Route>
+          <Header/>
+          <Route path="/">
+            <EnterButton/>
+          </Route>
+          {/*Selection page route will be here*/}
+          <Route
+              exact
+              path='/leagues'
+              render={() => (
+                  <React.Fragment>
+                    <Leagues/>
+                  </React.Fragment>)}
+          />
+          <Route
+              path={'/league/:leagueId'}
+              render={() => (
+                  <React.Fragment>
+                    <SelectionPage/>
+                  </React.Fragment>
+              )}
+          />
         </div>
-    </Router>;
+      </Router>
+  );
 }
 
 export default App;
-
