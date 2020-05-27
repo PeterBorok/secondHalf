@@ -13,12 +13,6 @@ function App() {
             <Route path="/">
                 <EnterButton/>
             </Route>
-            <Route path="/leagues">
-                <Navbar/>
-            </Route>
-            <Route path="/leagues/:id">
-                <Navbar/>
-            </Route>
         </div>
     </Router>;
 }
