@@ -14,14 +14,14 @@ const Navbar = () => {
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav mr-auto">
                                     <li className="nav-item active">
-                                        <a className="navbar-brand" href="#">
+                                        <a className="navbar-brand" href="/leagues">
                                             <img src={logo} width="auto" height="30"
                                                  className="d-inline-block align-top" alt=""></img>
                                                 Home
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">Valami plusz oldal</a>
+                                        <a className="nav-link" href="/leagues">Go to national leagues</a>
                                     </li>
                                     <li className="nav-item dropdown">
                                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -30,13 +30,13 @@ const Navbar = () => {
                                             Choose your league
                                         </a>
                                         <div className="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-                                            <a className="dropdown-item" href="#">England</a>
-                                            <a className="dropdown-item" href="#">France</a>
-                                            <a className="dropdown-item" href="#">Germany</a>
-                                            <a className="dropdown-item" href="#">Italy</a>
-                                            <a className="dropdown-item" href="#">Spain</a>
+                                            <a className="dropdown-item" href="/league/4328">England</a>
+                                            <a className="dropdown-item" href="/league/4334">France</a>
+                                            <a className="dropdown-item" href="/league/4331">Germany</a>
+                                            <a className="dropdown-item" href="/league/4332">Italy</a>
+                                            <a className="dropdown-item" href="/league/4335">Spain</a>
                                             <div className="dropdown-divider"></div>
-                                            <a className="dropdown-item" href="#">Favourites</a>
+                                            <a className="dropdown-item" href="/favourites">Favourites</a>
                                         </div>
                                     </li>
 

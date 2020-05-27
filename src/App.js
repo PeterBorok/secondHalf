@@ -14,67 +14,67 @@ import Navbar from "./components/Navbar";
 import EnterButton from "./components/EnterButton";
 
 function App() {
-  return (
-      <Router>
-        <FavouriteProvider>
-          <div className="App">
-              <Header/>
-              <Route path="/" exact>
+    return (
+        <Router>
+            <FavouriteProvider>
+                <div className="App">
+                    <Header/>
+                    <Route exact
+                           path="/">
+                        <EnterButton/>
+                    </Route>
+                    {/*Selection page route will be here*/}
+                    <Route
+                        exact
+                        path='/leagues'
+                        render={() => (
+                            <React.Fragment>
+                                <Navbar/>
+                                <Leagues/>
+                            </React.Fragment>)}
+                    />
+                    <Route
+                        exact
+                        path={'/league/:leagueId'}
+                        render={() => (
+                            <React.Fragment>
+                                <Navbar/>
+                                <SelectionPage/>
+                            </React.Fragment>
+                        )}
+                    />
+                    <Route
+                        path={'/league/details/:leagueId'}
+                        render={() => (
+                            <React.Fragment>
+                                <Navbar/>
+                                <LeagueDetails/>
+                            </React.Fragment>
+                        )}
+                    />
+                    <Route
+                        path={'/team/:teamId'}
+                        render={() => (
+                            <React.Fragment>
+                                <Navbar/>
+                                <div>Team detail page comes here</div>
+                            </React.Fragment>
+                        )}
+                    />
+                    <Route
+                        path={'/favourites'}
+                        render={() => (
+                            <React.Fragment>
+                                <Navbar/>
+                                <FavouriteTeams/>
+                            </React.Fragment>
+                        )}
+                    />
 
-                  <EnterButton/>
-              </Route>
-            {/*Selection page route will be here*/}
-            <Route
-                exact
-                path='/leagues'
-                render={() => (
-                    <React.Fragment>
-                        <Navbar/>
-                      <Leagues/>
-                    </React.Fragment>)}
-            />
-            <Route
-                exact
-                path={'/league/:leagueId'}
-                render={() => (
-                    <React.Fragment>
-                        <Navbar/>
-                      <SelectionPage/>
-                    </React.Fragment>
-                )}
-            />
-            <Route
-                path={'/league/details/:leagueId'}
-                render={() => (
-                    <React.Fragment>
-                        <Navbar/>
-                      <LeagueDetails/>
-                    </React.Fragment>
-                )}
-            />
-            <Route
-                path={'/team/:teamId'}
-                render={() => (
-                    <React.Fragment>
-                        <Navbar/>
-                      <div>Team detail page comes here</div>
-                    </React.Fragment>
-                )}
-            />
-            <Route
-                path={'/favourites'}
-                render={() => (
-                    <React.Fragment>
-                        <Navbar/>
-                      <FavouriteTeams/>
-                    </React.Fragment>
-                )}
-            />
-
-          </div>
-        </FavouriteProvider>
-      </Router>
-  );
+                </div>
+            </FavouriteProvider>
+        </Router>
+    );
 }
 
 export default App;
