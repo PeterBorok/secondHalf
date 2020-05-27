@@ -1,5 +1,4 @@
 import React from "react";
-import video from "./video/uefa.mp4";
 import "./App.css";
 
 import Header from "./components/Header";

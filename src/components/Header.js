@@ -1,5 +1,6 @@
 import React from "react";
 import video from "../video/uefa.mp4";
+import "../App.css";
 
 export default function Header() {
     return (
