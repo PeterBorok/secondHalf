@@ -29,6 +29,7 @@ function App() {
                 path='/leagues'
                 render={() => (
                     <React.Fragment>
+                        <Navbar/>
                       <Leagues/>
                     </React.Fragment>)}
             />
@@ -37,6 +38,7 @@ function App() {
                 path={'/league/:leagueId'}
                 render={() => (
                     <React.Fragment>
+                        <Navbar/>
                       <SelectionPage/>
                     </React.Fragment>
                 )}
@@ -45,6 +47,7 @@ function App() {
                 path={'/league/details/:leagueId'}
                 render={() => (
                     <React.Fragment>
+                        <Navbar/>
                       <LeagueDetails/>
                     </React.Fragment>
                 )}
@@ -53,6 +56,7 @@ function App() {
                 path={'/team/:teamId'}
                 render={() => (
                     <React.Fragment>
+                        <Navbar/>
                       <div>Team detail page comes here</div>
                     </React.Fragment>
                 )}
@@ -61,6 +65,7 @@ function App() {
                 path={'/favourites'}
                 render={() => (
                     <React.Fragment>
+                        <Navbar/>
                       <FavouriteTeams/>
                     </React.Fragment>
                 )}
