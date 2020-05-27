@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
+import LeagueCard from "./LeagueCard";
+
 import "./Leagues.css";
-import {Link} from "react-router-dom";
 
 const Leagues = () => {
 
@@ -44,24 +45,9 @@ const Leagues = () => {
 
   return (
       <main>
-        <section className="league-cards">
+        <section className="cards">
           {leagues.map((entry) => (
-              <div className="league-card" key={entry.id}>
-                <div className="league-card__image-container">
-                  <img src={entry.badge} alt={entry.league}/>
-                </div>
-                <div className="league-card__content">
-                  <p className="league-card__title text--medium">
-                    {entry.league}
-                  </p>
-                  <div className="league-card__info">
-                    <p className="text--medium">{entry.country}</p>
-                    <Link to={`/league/${entry.id}`} className="league-card__teams">
-                      <div className="text--medium team-list">Teams</div>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <LeagueCard entry={entry} key={entry.id}/>
           ))}
         </section>
       </main>
