@@ -27,6 +27,18 @@
   }
 }
 
+@media (max-width: 920px) {
+  #videoBg {
+    display: none
+  }
+  body {
+    /*We can change the picture here for a better one*/
+    background: url(./image/poster.png);
+    background-position: inherit;
+    background-size: cover;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
