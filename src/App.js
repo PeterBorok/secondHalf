@@ -11,33 +11,35 @@ import Navbar from "./components/Navbar";
 import EnterButton from "./components/EnterButton";
 
 function App() {
-  return (
-      <Router>
-        <div className="App">
-          <Header/>
-          <Route path="/">
-            <EnterButton/>
-          </Route>
-          {/*Selection page route will be here*/}
-          <Route
-              exact
-              path='/leagues'
-              render={() => (
-                  <React.Fragment>
-                    <Leagues/>
-                  </React.Fragment>)}
-          />
-          <Route
-              path={'/league/:leagueId'}
-              render={() => (
-                  <React.Fragment>
-                    <SelectionPage/>
-                  </React.Fragment>
-              )}
-          />
-        </div>
-      </Router>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <Header/>
+                <Route path="/" exact>
+
+                    <EnterButton/>
+                </Route>
+                {/*Selection page route will be here*/}
+                <Route
+                    exact
+                    path='/leagues'
+                    render={() => (
+                        <React.Fragment>
+                            <Navbar/>
+                            <Leagues/>
+                        </React.Fragment>)}
+                />
+                <Route
+                    path={'/league/:leagueId'}
+                    render={() => (
+                        <React.Fragment>
+                            <SelectionPage/>
+                        </React.Fragment>
+                    )}
+                />
+            </div>
+        </Router>
+    );
 }
 
 export default App;

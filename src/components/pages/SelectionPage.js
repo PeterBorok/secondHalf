@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-import "./SelectionPage.css";
+//import "./SelectionPage.css";
 
 const SelectionPage = () => {
   const getIdFromUrl = () => {
