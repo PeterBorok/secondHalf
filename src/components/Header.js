@@ -1,9 +1,12 @@
 import React from "react";
 import video from "../video/uefa.mp4";
 import "../App.css";
+import { Link } from "react-router-dom";
+
 
 export default function Header() {
     return (
+        <div>
         <header>
             <img
                 style={{ width: "35%" }}
@@ -19,6 +22,9 @@ export default function Header() {
                 <source src={video} type="video/mp4" />
             </video>
         </header>
+            <Link to="/leagues" class="myButton" style={{textDecoration: "none"}}>ENTER</Link>
+
+        </div>
     );
 }
 
