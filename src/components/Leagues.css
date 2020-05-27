@@ -20,14 +20,14 @@ main {
     padding: 60px 0;
 }
 
-.league-card__image-container {
+.card__image-container {
     width: 100%;
     padding-top: 56.25%;
     overflow: hidden;
     position: relative;
 }
 
-.league-card__image-container img {
+.card__image-container img {
     height: 90%;
     position: absolute;
     top: 50%;
@@ -35,46 +35,57 @@ main {
     transform: translate(-50%, -50%);
 }
 
-.league-cards {
+.cards {
     grid-column: 2 / span 12;
     display: grid;
     grid-template-columns: repeat(12, minmax(auto, 60px));
     grid-gap: 40px;
 }
 
-.league-card {
+.card {
     grid-column-end: span 4;
     display: flex;
     flex-direction: column;
     background-color: #39393b;
-    cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 
-.league-card:hover {
+.card:hover {
     transform: translateY(-7px);
 }
 
-.league-card__content {
+.card__content {
     padding: 20px;
 }
 
-.league-card__title {
+.card__title {
     margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25em;
 }
 
-.league-card__info {
+.card__info {
     display: flex;
     align-self: end;
     align-items: center;
 }
 
-.league-card__teams {
+.card__teams {
     margin-left: auto;
     padding: 5px 20px;
-    background-color: #303032;
+    background-color: #ff6600;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card__details {
+    margin-left: auto;
+    padding: 5px 20px;
+    background-color: #ffcc00;
     border-radius: 20px;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 a, u {
@@ -83,6 +94,27 @@ a, u {
 
 .team-list {
     font-weight: bolder;
+}
+
+.league-details {
+    padding: 5px 20px;
+    background-color: #336699;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.team-details {
+    font-weight: bolder;
+    color: black;
+
+}
+
+.add-to-favourites {
+    padding: 5px 20px;
+    background-color: #ff3333;
+    border-radius: 20px;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1080px) {
