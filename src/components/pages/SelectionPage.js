@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-import "./SelectionPage.css";
+import TeamCard from "../TeamCard";
 
 const SelectionPage = () => {
   const getIdFromUrl = () => {
@@ -31,22 +31,9 @@ const SelectionPage = () => {
 
   return (
       <main>
-        <section className="league-cards">
+        <section className="cards">
           {teams.map((entry) => (
-              <div className="league-card" key={entry.id}>
-                <div className="league-card__image-container">
-                  <img src={entry.badge} alt={entry.name}/>
-                </div>
-                <div className="league-card__content">
-                  <p className="league-card__title text--medium">
-                    {entry.name}
-                  </p>
-                  <div className="league-card__info">
-                    <p className="text--medium">{entry.stadiumName}</p>
-                    <p className="league-card__teams text--medium">{entry.formedYear}</p>
-                  </div>
-                </div>
-              </div>
+              <TeamCard entry={entry} key={entry.id}/>
           ))}
         </section>
       </main>
