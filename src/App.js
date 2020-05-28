@@ -12,14 +12,15 @@ import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import EnterButton from "./components/EnterButton";
+import TeamDetails from "./components/TeamDetails";
 
 function App() {
   return (
       <Router>
         <FavouriteProvider>
           <div className="App">
-            <Header/>
-            <Route path="/" exact>
+            <Route exact path="/" >
+              <Header/>
               <EnterButton/>
             </Route>
             <Route
@@ -55,7 +56,7 @@ function App() {
                 render={() => (
                     <React.Fragment>
                       <Navbar/>
-                      <div>Team detail page comes here</div>
+                      <TeamDetails/>
                     </React.Fragment>
                 )}
             />
