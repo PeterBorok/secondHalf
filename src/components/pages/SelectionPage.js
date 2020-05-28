@@ -1,15 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
+import {getIdFromUrl} from '../Util.js'
 import TeamCard from "../TeamCard";
 
 const SelectionPage = () => {
-  const getIdFromUrl = () => {
-    let urlFragments = window.location.href.split("/");
-    return urlFragments[urlFragments.length - 1];
-  };
-  let leagueId = getIdFromUrl();
-
+  const leagueId = getIdFromUrl();
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
