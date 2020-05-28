@@ -117,6 +117,15 @@ a, u {
     cursor: pointer;
 }
 
+.remove-from-favourites {
+    padding: 5px 20px;
+    background-color: white;
+    color: #ff3333;
+    border-radius: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1080px) {
     .league-card {
         grid-column-end: 6;
