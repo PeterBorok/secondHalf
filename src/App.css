@@ -1,151 +1,154 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
+}
+
+body {
+    background-color: #39393b;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 @media (min-aspect-ratio: 16/9) {
-  #videoBg {
-    width: 100%;
-    height: auto;
-  }
+    #videoBg {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-aspect-ratio: 16/9) {
-  #videoBg {
-    width: auto;
-    height: 100%;
-  }
+    #videoBg {
+        width: auto;
+        height: 100%;
+    }
 }
 
 @media (max-width: 920px) {
-  #videoBg {
-    display: none
-  }
-  body {
-    /*We can change the picture here for a better one*/
-    /*background: url(./image/poster.png);*/
-    background-position: inherit;
-    background-size: cover;
-  }
+    #videoBg {
+        display: none
+    }
+
+    body {
+        background-color: #39393b;
+        background-position: inherit;
+        background-size: cover;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (min-width: 992px) {
-  .animate {
-    background-color: darkgray;
-    animation-duration: 0.5s;
-    -webkit-animation-duration: 0.5s;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-  }
+    .animate {
+        background-color: darkgray;
+        animation-duration: 0.5s;
+        -webkit-animation-duration: 0.5s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
 }
 
 @keyframes slideIn {
-  0% {
-    transform: translateY(1rem);
-    opacity: 0;
-  }
-  100% {
-    transform:translateY(0rem);
-    opacity: 1;
-  }
-  0% {
-    transform: translateY(1rem);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
 }
 
 @-webkit-keyframes slideIn {
-  0% {
-    -webkit-transform: translateY(1rem);
-    -webkit-opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    -webkit-opacity: 1;
-  }
-  0% {
-    -webkit-transform: translateY(1rem);
-    -webkit-opacity: 0;
-  }
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
 }
 
 .slideIn {
-  -webkit-animation-name: slideIn;
-  animation-name: slideIn;
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
 }
 
 .myButton {
-  position: fixed;
-  top: 50%;
-  left: 38%;
-  font-weight: 700;
-  font-size: 4vw;
-  margin: 50px;
-  border: none;
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, .25);
-  backdrop-filter: blur(5px);
-  color: #ffffff;
-  font-weight: 100;
-  padding: 20px;
-  text-transform: uppercase;
-  border-radius: 6px;
-  display: inline-block;
-  transition: all 0.3s ease 0s;
-  width: 20%;
+    position: relative;
+    width: 50%;
+    top: 200px;
+    display: inline;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 4vw;
+    border: none;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, .25);
+    backdrop-filter: blur(5px);
+    color: #ffffff;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
 }
+
 .myButton:hover {
-  color: lightgoldenrodyellow;
-  font-size: 4.5vw;
-  letter-spacing: 5px;
-  -webkit-text-stroke: 1px white;
-  background: none;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  transition: all 0.3s ease 0s;
+    color: lightgoldenrodyellow;
+    font-size: 4.5vw;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 1px white;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
 
 }
 
 .myButton:active {
- z-index: -1;
+    z-index: 1;
 }
 
 a, u {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 
