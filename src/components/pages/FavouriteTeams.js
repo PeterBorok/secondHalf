@@ -1,21 +1,22 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 import {FavouriteTeamContext} from "../context/FavouriteTeamContext";
 import TeamCard from "../TeamCard";
+import EmptyTeamCard from "../EmptyTeamCard";
 
 const FavouriteTeams = () => {
-  const [favouriteTeams, setFavouriteTeams] = useContext(FavouriteTeamContext);
+  const [favouriteTeams] = useContext(FavouriteTeamContext);
 
   return (
       <div>
-        Favourite Teams
         <main>
           <section className="cards">
-            {favouriteTeams.map((entry) => (
-                <TeamCard entry={entry} key={entry.id}/>
-            ))}
+            {favouriteTeams.length ?
+                favouriteTeams.map((entry) => (
+                    <TeamCard entry={entry} key={entry.id}/>
+                )) : <EmptyTeamCard/>
+            }
           </section>
         </main>
-
       </div>
   );
 }
